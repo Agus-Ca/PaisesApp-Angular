@@ -31,9 +31,9 @@ export class PorPaisComponent {
       });
   }
 
-  sugerencias( termino:string) {
+  sugerencias( termino:string ) {
     this.hayError = false;
-    //TODO: crear sugerencias
-  }
+    // TODO: crear sugerencias
+  };
 
 }

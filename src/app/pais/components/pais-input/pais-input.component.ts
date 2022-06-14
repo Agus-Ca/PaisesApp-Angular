@@ -9,11 +9,11 @@ import { debounceTime, Subject } from 'rxjs';
 })
 export class PaisInputComponent implements OnInit {
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.debouncer
       .pipe( debounceTime(400) )
       .subscribe( valor => {
-        this.onDebounce.emit(valor);
+        this.onDebounce.emit( valor);
       });
   };
 
