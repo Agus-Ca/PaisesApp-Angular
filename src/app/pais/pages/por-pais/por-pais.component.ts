@@ -18,17 +18,22 @@ export class PorPaisComponent {
 
   paises: Country[] = [];
 
-  buscar(): void {
+  buscar(termino:string): void {
     this.hayError = false;
-    console.log(this.termino);
+    this.termino = termino;
     
-    this.paisService.buscarPais( this.termino )
+    this.paisService.buscarPais( termino )
       .subscribe( paises => {
         this.paises = paises;
       }, ( err ) => {
         this.hayError = true;
         this.paises = [];
       });
+  }
+
+  sugerencias( termino:string) {
+    this.hayError = false;
+    //TODO: crear sugerencias
   }
 
 }
